@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+	<h1>
+		Welcome to {{ title }}!
+	</h1>
+</div>
+<bi-table [data]="data">
+	<bi-table-column [viewTemplate]="idViewTemplate" [def]="{id:1, headerName:'Id'}">
+		<ng-template #idViewTemplate let-rowData="rowData" >{{rowData.id}}--(custom template)</ng-template>
+	</bi-table-column>
+	<bi-table-column [viewTemplate]="nameViewTemplate" [def]="{id:2, headerName:'Name'}">
+		<ng-template #nameViewTemplate let-rowData="rowData" >{{rowData.name}}--(custom template)</ng-template>
+	</bi-table-column>
+	<bi-table-column [def]="{id:3, headerName:'Description', field:'description'}">
+	</bi-table-column>
+</bi-table>
+Define with ngFor
+<bi-table [data]="data">
+	<bi-table-column *ngFor="let column of columns" [def]="column">
+	</bi-table-column>
+</bi-table>

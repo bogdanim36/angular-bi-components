@@ -1,0 +1,18 @@
+{
+  "extends": "../tslint.json",
+  "rules": {
+    "no-input-rename": true,
+    "directive-selector": [
+      true,
+      false,
+      "bi",
+      "kebab-case"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "bi",
+      "kebab-case"
+    ]
+  }
+}

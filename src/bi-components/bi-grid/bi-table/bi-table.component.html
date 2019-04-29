@@ -1,0 +1,21 @@
+<ng-content select="bi-table-toolbar[top=true]"></ng-content>
+<table border="1">
+	<thead>
+	<tr>
+		<th *ngFor="let column of def?.columns">{{column.def.headerName}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr *ngFor="let rowDataSource of data">
+		<td *ngFor="let columnDef of def.columns">
+			<bi-table-body-cell [templateRef]="columnDef.viewTemplate?columnDef.viewTemplate:bodyCellTemplate"
+										[rowData]="rowDataSource"
+										[column]="columnDef.def"
+										>
+				<ng-template #bodyCellTemplate >{{rowDataSource[columnDef.def.field]}}--(default template)</ng-template>
+			</bi-table-body-cell>
+		</td>
+	</tr>
+	</tbody>
+</table>
+<ng-content select="bi-table-toolbar[bottom=true]"></ng-content>
