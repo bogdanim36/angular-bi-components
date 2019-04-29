@@ -1,2 +1,1 @@
-# angular-bi-components
-Angular 7 components
+# Angular 7 Components
