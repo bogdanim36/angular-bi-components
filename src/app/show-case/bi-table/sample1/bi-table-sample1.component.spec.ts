@@ -5,7 +5,6 @@ import {DebugElement, NO_ERRORS_SCHEMA} from '@angular/core';
 import {By} from '@angular/platform-browser';
 import {AppService} from '../../../app-service/app.service';
 import {BiTableComponent} from '../../../../bi-components/bi-grid/bi-table/bi-table.component';
-import {BiTableColumn} from '../../../../bi-components/bi-grid/bi-table/models/bi-table-column';
 import {BiTableColumnDirective} from '../../../../bi-components/bi-grid/bi-table/bi-table-column.directive';
 import {BiTableBodyCellComponent} from '../../../../bi-components/bi-grid/bi-table/bi-table-body-cell/bi-table-body-cell.component';
 import {BiTableToolbarComponent} from '../../../../bi-components/bi-grid/bi-table/bi-table-toolbar/bi-table-toolbar.component';
