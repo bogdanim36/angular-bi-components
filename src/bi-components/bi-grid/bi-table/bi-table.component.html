@@ -1,18 +1,20 @@
 <ng-content select="bi-table-toolbar[top=true]"></ng-content>
-<table border="1">
+<table style="border-spacing:0;border-collapse: collapse">
 	<thead>
 	<tr>
-		<th *ngFor="let column of def?.columns">{{column.def.headerName}}</th>
+		<th *ngFor="let column of def?.columns"
+			 style="border:none !important"
+		>{{column.def.headerName}}</th>
 	</tr>
 	</thead>
 	<tbody>
 	<tr *ngFor="let rowDataSource of data">
-		<td *ngFor="let columnDef of def.columns">
+		<td *ngFor="let columnDef of def.columns" style="border:none !important">
 			<bi-table-body-cell [templateRef]="columnDef.viewTemplate?columnDef.viewTemplate:bodyCellTemplate"
-										[rowData]="rowDataSource"
-										[column]="columnDef.def"
-										>
-				<ng-template #bodyCellTemplate >{{rowDataSource[columnDef.def.field]}}--(default template)</ng-template>
+									  [rowData]="rowDataSource"
+									  [column]="columnDef.def"
+			>
+				<ng-template #bodyCellTemplate>{{rowDataSource[columnDef.def.field]}}--(default template)</ng-template>
 			</bi-table-body-cell>
 		</td>
 	</tr>

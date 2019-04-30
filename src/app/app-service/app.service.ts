@@ -1,13 +1,11 @@
-import {Component} from '@angular/core';
-import {BiTableColumn} from '../bi-components/bi-grid/bi-table/models/bi-table-column';
+import {Injectable} from '@angular/core';
+import {BiTableColumn} from '../../bi-components/bi-grid/bi-table/models/bi-table-column';
 
-@Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+@Injectable({
+    providedIn: 'root'
 })
-export class AppComponent {
-    title = 'BiComponents';
+export class AppService {
+
     data: Array<any>;
     columns: Partial<BiTableColumn>[];
 
@@ -23,4 +21,5 @@ export class AppComponent {
             {id: 3, field: 'description', headerName: 'Description'},
         ];
     }
+
 }

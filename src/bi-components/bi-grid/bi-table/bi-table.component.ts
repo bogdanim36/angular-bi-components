@@ -7,14 +7,16 @@ import {
     OnChanges,
     OnInit,
     QueryList,
-    SimpleChanges
+    SimpleChanges,
+    ViewEncapsulation
 } from '@angular/core';
 import {BiTableColumnDirective} from './bi-table-column.directive';
 
 @Component({
     selector: 'bi-table',
     templateUrl: './bi-table.component.html',
-    styleUrls: ['./bi-table.component.scss']
+    styleUrls: ['./bi-table.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class BiTableComponent implements OnInit, OnChanges, AfterContentInit {
     def: {
