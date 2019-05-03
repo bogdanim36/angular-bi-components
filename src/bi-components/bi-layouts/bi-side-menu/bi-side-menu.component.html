@@ -1,0 +1,21 @@
+<div class="app-container" [class.is-mobile]="appService.isHandset">
+	<mat-toolbar color="primary" class="app-toolbar">
+		<button mat-icon-button (click)="snav.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<bi-main-toolbar class="mat-toolbar mat-toolbar-single-row"></bi-main-toolbar>
+	</mat-toolbar>
+
+	<mat-sidenav-container class="sidenav-container" #drawer>
+		<mat-sidenav #snav [mode]="isHandset ? 'over' : 'side'" opened
+						 style="width:250px"
+						 role="navigation"
+						 [fixedInViewport]="isHandset"
+		>
+			<bi-tree-menu></bi-tree-menu>
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<router-outlet></router-outlet>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>

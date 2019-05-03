@@ -1,0 +1,43 @@
+:host ::ng-deep .angular-tree-component{
+  display: block;
+}
+:host ::ng-deep tree-node-expander{
+  display:none;
+}
+:host ::ng-deep .node-content-wrapper:hover{
+  box-shadow: none;
+}
+:host ::ng-deep .nav-node-btn{
+  width:100%;
+  text-align: left;
+  font: 500 20px/32px Roboto,"Helvetica Neue",sans-serif; ;
+  font-size: 120%;
+  border:none;
+  outline: none;
+  background-color: transparent;
+  padding:0
+}
+:host ::ng-deep .level1{
+  background-color: lightgray;
+  line-height: 30px;
+}
+:host ::ng-deep .node-label{
+  padding: 0 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  width:100%;
+}
+:host ::ng-deep .nav-node-btn > mat-icon.expandable{
+  position: absolute;
+  right:17px;
+  top:2px;
+  cursor: pointer;
+}
+:host ::ng-deep .node-content-wrapper{
+  width:100%;
+  padding:0;
+}
+
+.active-link{
+  background-color: lightgray;
+}

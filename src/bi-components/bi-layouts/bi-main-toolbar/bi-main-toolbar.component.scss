@@ -1,0 +1,31 @@
+app-main-toolbar {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.is-mobile .app-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.app-name {
+  margin: 0 0 0 10px;
+  font-size: 120%;
+}
+.language-select{
+  font-size:90%;
+  height:26px;
+  line-height: 26px;
+  margin-left:20px;
+  width:120px;
+  background-color:lightgrey;
+  padding:0 5px;
+  color: black;
+}

@@ -1,10 +1,11 @@
 import {TableHelper} from '../table-helper';
 import ObjectAssign = TableHelper.ObjectAssign;
+import {BiTranslation} from '../../../bi-translation';
 
 export class BiTableColumn {
     field: string;
     id?: string | number;
-    headerName: string;
+    headerName: BiTranslation;
     filter?: string | boolean;
     sortable: boolean;
     width?: number;

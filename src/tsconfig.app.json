@@ -1,8 +1,15 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
-    "types": []
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": [
+        "./app/*"
+      ],
+      "@bic/*": [
+        "./src/bi-components/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",

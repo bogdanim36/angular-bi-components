@@ -7,6 +7,8 @@ import {BiTableSample1Component} from './show-case/bi-table/sample1/bi-table-sam
 import {RouterModule, Routes} from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BiTableSample2Component } from './show-case/bi-table/sample2/bi-table-sample2.component';
+import {BiLayoutsModule} from '../bi-components/bi-layouts/bi-layouts.module';
+import {HttpClient} from '@angular/common/http';
 
 const appRoutes: Routes = [
     {path: 'bi-table/sample1', component: BiTableSample1Component},
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     imports: [
         RouterModule.forRoot(appRoutes, {enableTracing: true}),
         BrowserModule,
-        BiGridModule
+        BiGridModule,
+        BiLayoutsModule
     ],
     exports: [BiGridModule],
     providers: [],
