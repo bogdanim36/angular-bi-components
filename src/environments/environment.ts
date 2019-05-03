@@ -6,7 +6,6 @@ export const environment = {
     production: false,
     language: 'ro',
     languages: [{id: 'ro', name: 'Romana'}, {id: 'en', name: 'English'}]
-
 };
 
 /*
