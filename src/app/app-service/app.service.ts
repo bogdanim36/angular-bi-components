@@ -5,7 +5,7 @@ import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout';
 import {map} from 'rxjs/operators';
 import {BiTranslation} from '../../bi-components/bi-translation';
 import {environment} from '../../environments/environment';
-import {appInfo} from '@app/app.info';
+import {appInfo} from '../app.info';
 
 @Injectable({
     providedIn: 'root'
