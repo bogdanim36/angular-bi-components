@@ -1,5 +1,5 @@
 <h1 class="app-name" >{{appTitle}}</h1>
-<mat-select [(ngModel)]="language" (selectionChange)="languageChanged($event)"
+<mat-select [(ngModel)]="language" (selectionChange)="onLanguageChanged($event)"
 				class="language-select" >
 	<mat-option *ngFor="let language of languages" [value]="language.id">{{language.name}}</mat-option>
 </mat-select>

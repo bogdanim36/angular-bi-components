@@ -9,7 +9,7 @@ import {BiMenuItemsService} from './bi-tree-menu/bi-menu-items.service';
 import {LayoutModule} from '@angular/cdk/layout';
 import {RouterModule} from '@angular/router';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
-import {MatButtonModule, MatIconModule, MatSelectModule, MatSidenavModule, MatToolbarModule, MatTreeModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatSelectModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {TreeModule} from 'angular-tree-component';
 
@@ -34,12 +34,10 @@ import {TreeModule} from 'angular-tree-component';
         RouterModule,
         BrowserAnimationsModule,
         AngularFontAwesomeModule,
-        MatTreeModule,
         MatIconModule,
         MatToolbarModule,
         MatSidenavModule,
         MatButtonModule,
-        MatTreeModule,
         FormsModule,
         MatSelectModule,
         TreeModule.forRoot()

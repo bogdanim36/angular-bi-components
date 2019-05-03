@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {appInfo} from '@app/app.info';
-import {environment} from '../../../environments/environment';
 import {MatSelectChange} from '@angular/material';
 import {AppService} from '@app/app-service/app.service';
 
@@ -15,19 +13,17 @@ export class BiMainToolbarComponent implements OnInit {
     languages: any[];
 
     constructor(private appService: AppService) {
-        this.appTitle = appInfo.name;
-        this.language = environment.language;
-        this.languages = environment.languages;
+        this.appTitle = appService.appTitle;
         document.title = this.appTitle;
         document.querySelector('head title').innerHTML = this.appTitle;
+        this.language = appService.language;
+        this.languages = appService.languages;
     }
 
     ngOnInit() {
     }
 
-    languageChanged(changed: MatSelectChange) {
-        environment.language = changed.value;
-        this.appService.addToStorage('language', environment.language);
-        window.location.reload();
+    onLanguageChanged(changed: MatSelectChange) {
+        this.appService.languageChanged.next(changed.value);
     }
 }
